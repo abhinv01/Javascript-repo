@@ -234,4 +234,75 @@ console.log(occurrences); */
 let updatedArray = nums.map(num => num*10).map(num1 => num1 + 15).filter(num3 => num3 > 50)      //first map will give numbers multiplied by 10, then 2nd map have num1 as paramenter and it will iterate over array received from previous map and 3rd filter will apply on array received from 2nd map
 console.log(updatedArray) */
 
+// console.log(("a".localeCompare("z")))         //A has lower order than Z, a has lower order than A, a has higher order than H
+// console.log("h" < "A");
 
+const D = new Date();
+let newArr = [];
+newArr.push((D.toLocaleString()))
+newArr.push((D.toLocaleDateString()))
+newArr.push((D.toLocaleTimeString()))
+newArr.push((D.toDateString()))
+newArr.push((D.toTimeString()))
+// console.dir(newArr)
+
+// console.log([1,2].concat(newArr))
+
+
+// object merging
+let ob1 = {a:1}
+let ob2 = {b:2}
+let keyy = "b"
+Object.assign(ob1,ob2)   //deep copy into ob1 ie ob1 = ob1+ob2
+ob2.b = 55
+// console.log(ob1,ob2)
+// console.log(ob2[keyy]);
+
+
+/* 
+const employees = {
+    engineers: {
+        first: {
+            id: 1,
+            name: "John Doe",
+            occupation: "Back-end Engineer"
+        },
+        second: {
+            id: 2,
+            name: "Jane Doe",
+            occupation: "Front-end Engineer",
+            address:{city:"pune",pin:444}
+        },
+    }
+};
+let ci = "city" 
+const {engineers:{first}} = employees                    //object destructuring on nested objects
+const {engineers:{second:{address:{[ci]:ct}}}} = employees  ;                  //object destructuring on nested objects
+({engineers} = employees)                               //object destructuring without declaring object
+console.log(first,ct,engineers);
+  */
+
+
+// ----------------IIFE
+/* (function ImmediateInvoke(){
+    console.log("invoked named")
+})();
+
+(()=> console.dir("invoked Arrow"))(); */
+
+
+
+// -----------------set                                        //it is a collection with unique elements
+const s = new Set("hello")
+console.log(s);
+for (const iterator of s) {
+    console.log("for of "+iterator)
+}
+
+for (const key in s) {
+    console.log("for in ",key);         //this will not work as there is no index/key in sets, only order of insertion is maintained
+        
+}
+                                        //to map,reduce,filter convert set back to array by [...s] 
+console.log(s.keys())
+console.log(s.values())
