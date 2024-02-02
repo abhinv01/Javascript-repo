@@ -1,4 +1,6 @@
-console.log(typeof "Nirlon")
+// Note: supplement these code blocks with handwritten notes to comprehend better
+
+console.log(typeof "Nirlon") //to check data type of any element
 
 // "use strict"; treats all js code as a newer version as per newer standards
 // Node and deno is used to compile js code outside browser
@@ -9,8 +11,9 @@ console.log(typeof "Nirlon")
     typeof (null, array, object) is object*/
 
 /*pre and post increment 
-    let a = ++9 -> a = 10
-    let a = 9++ -> a = 10 */
+    let numb = 9
+    let a = ++numb -> a = 10 , numb = 10
+    let a = numb++ -> a = 9 , numb = 10*/
 
 /* operations
     "1"+2 -> "12"
@@ -38,7 +41,7 @@ console.log(typeof "Nirlon")
 let str = new String("144hz adaptive sync Ryzen 8 cores")
 console.log(str.split(" ",3))
 
-// const car = Symbol(56)
+// const car = Symbol(56)                                 //symbol is a unique data structure i.e symbol("123") != symbol("123")
 // console.log(typeof toString(car))
 
 // console.log(Math.floor(Math.random() * 6 + 1))
@@ -60,8 +63,8 @@ console.log(Date.now());
 
 
 // Array
-
-/* let a = [1,5,6,9,8,8]
+  
+/* let a = [1,5,6,9,8,8]                                 //difficult to delete element from array, in set it is easy by specifying set.delete(element)
 console.log([...a,...[5,5,5,5,5]])
 
 
@@ -237,14 +240,14 @@ console.log(updatedArray) */
 // console.log(("a".localeCompare("z")))         //A has lower order than Z, a has lower order than A, a has higher order than H
 // console.log("h" < "A");
 
-const D = new Date();
+/* const D = new Date();
 let newArr = [];
 newArr.push((D.toLocaleString()))
 newArr.push((D.toLocaleDateString()))
 newArr.push((D.toLocaleTimeString()))
 newArr.push((D.toDateString()))
 newArr.push((D.toTimeString()))
-// console.dir(newArr)
+// console.dir(newArr) */
 
 // console.log([1,2].concat(newArr))
 
@@ -253,8 +256,9 @@ newArr.push((D.toTimeString()))
 let ob1 = {a:1}
 let ob2 = {b:2}
 let keyy = "b"
-Object.assign(ob1,ob2)   //deep copy into ob1 ie ob1 = ob1+ob2
+Object.assign(ob1,ob2)   //deep copy into ob1 ie ob1 = ob1+ob2 or simply use ... spread operator
 ob2.b = 55
+
 // console.log(ob1,ob2)
 // console.log(ob2[keyy]);
 
@@ -292,7 +296,7 @@ console.log(first,ct,engineers);
 
 
 
-// -----------------set                                        //it is a collection with unique elements
+/* // -----------------set                                        //it is a collection with unique elements
 const s = new Set("hello")
 console.log(s);
 for (const iterator of s) {
@@ -305,4 +309,4 @@ for (const key in s) {
 }
                                         //to map,reduce,filter convert set back to array by [...s] 
 console.log(s.keys())
-console.log(s.values())
+console.log(s.values()) */
