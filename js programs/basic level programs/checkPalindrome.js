@@ -38,3 +38,16 @@ while(i!==j){
 
 
 isPalindrome ? console.log(`${str} is palindrome`) : console.log(`${str} is not a palindrome`);
+
+
+
+function iisPalindrome(str) {
+    // Write your code here
+
+    const cleanedStr = str.replace(/\W+/g,"").toLowerCase()
+    console.log(cleanedStr)
+    const reversedStr = cleanedStr.split("").reverse().join("");
+    return cleanedStr === reversedStr;
+}
+console.log(iisPalindrome("Madam madam"))
+

@@ -42,6 +42,7 @@ console.log(Object.getOwnPropertyNames(prot))                    //getOwnpropert
 //fahrenheit = (celsius * 1.8) +32;
 // celsius = (fahrenheit- 32)/1.8
 
+
 //random number generator /otp generation
 let randomNumber = ""
 for (let index = 0; index < 4; index++) {
@@ -453,3 +454,10 @@ console.log(chunk([1,2,3,4,5],6))
 //     this.sest = "Sest" 
 //     console.log(this)
 // })()
+
+//check for reduce
+// let arr = [1,2,3,4]
+// arr.reduce((acc,curr) => {
+//   console.log("acc ",acc,"      curr ",curr);
+
+// })
