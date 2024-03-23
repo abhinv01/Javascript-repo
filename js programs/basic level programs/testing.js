@@ -461,3 +461,14 @@ console.log(chunk([1,2,3,4,5],6))
 //   console.log("acc ",acc,"      curr ",curr);
 
 // })
+
+
+strVow = "aeiouu"
+objVow = {a:1,i:2,e:1,o:1,u:2}
+for (const char of strVow) {
+    if(!objVow[char]){
+        console.log("false")
+    }
+    objVow[char]--
+
+}
