@@ -21,4 +21,35 @@ recur(nums,0)
 return result
 }
 
-console.log(subsets("()"));
+// console.log(subsets("()"));
+
+function permute(nums) {
+    const result = [];
+    
+    function backtrack(current) {
+        if (current.length === nums.length) {
+            result.push(current.slice()); // Add a copy of the current permutation to the result
+            return;
+        }
+        
+        for (let i = 0; i < nums.length; i++) {
+            if (!current.includes(nums[i])) {
+                current.push(nums[i]); // Choose
+                backtrack(current);    // Explore
+                current.pop();         // Unchoose
+            }
+        }
+    }
+    
+    backtrack([]);
+    return result;
+}
+
+// Test
+const num = 123;
+const permutations = permute(Array.from(String(num), Number));
+console.log(permutations);
+
+
+
+

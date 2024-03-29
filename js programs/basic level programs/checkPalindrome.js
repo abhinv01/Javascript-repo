@@ -51,3 +51,23 @@ function iisPalindrome(str) {
 }
 console.log(iisPalindrome("Madam madam"))
 
+
+function isPalndrome(str) {
+    let palindrome = true;
+    str = str.toString()
+    let newArr = str.toString().split('');
+    let i = 0 , j = newArr.length-1;
+    
+    while(i <= j){
+        if(newArr[i] !== newArr[j]){
+            palindrome = false
+            break;
+        }
+        i++;
+        j--;
+    }
+    
+    return palindrome ? true : false;
+}
+
+console.log("cap ",isPalndrome(122221));
